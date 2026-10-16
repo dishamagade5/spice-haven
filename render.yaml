@@ -6,15 +6,37 @@ services:
     buildCommand: mvn clean package -DskipTests
     startCommand: java -jar target/restont-0.0.1-SNAPSHOT.jar
     envVars:
+      - key: SPRING_DATASOURCE_URL
+        fromDatabase:
+          name: spice-haven-db
+          property: connectionString
+      - key: SPRING_DATASOURCE_USERNAME
+        fromDatabase:
+          name: spice-haven-db
+          property: user
+      - key: SPRING_DATASOURCE_PASSWORD
+        fromDatabase:
+          name: spice-haven-db
+          property: password
       - key: DB_URL
-        sync: false
+        fromDatabase:
+          name: spice-haven-db
+          property: connectionString
       - key: DB_USERNAME
-        sync: false
+        fromDatabase:
+          name: spice-haven-db
+          property: user
       - key: DB_PASSWORD
-        sync: false
+        fromDatabase:
+          name: spice-haven-db
+          property: password
       - key: RAZORPAY_KEY_ID
         sync: false
       - key: RAZORPAY_KEY_SECRET
         sync: false
       - key: JPA_DDL_AUTO
         value: update
+
+databases:
+  - name: spice-haven-db
+    plan: free
