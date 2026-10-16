@@ -8,27 +8,27 @@ services:
     envVars:
       - key: SPRING_DATASOURCE_URL
         fromDatabase:
-          name: spice-haven-db
+          name: spicehaven
           property: connectionString
       - key: SPRING_DATASOURCE_USERNAME
         fromDatabase:
-          name: spice-haven-db
+          name: spicehaven
           property: user
       - key: SPRING_DATASOURCE_PASSWORD
         fromDatabase:
-          name: spice-haven-db
+          name: spicehaven
           property: password
       - key: DB_URL
         fromDatabase:
-          name: spice-haven-db
+          name: spicehaven
           property: connectionString
       - key: DB_USERNAME
         fromDatabase:
-          name: spice-haven-db
+          name: spicehaven
           property: user
       - key: DB_PASSWORD
         fromDatabase:
-          name: spice-haven-db
+          name: spicehaven
           property: password
       - key: RAZORPAY_KEY_ID
         sync: false
@@ -38,5 +38,5 @@ services:
         value: update
 
 databases:
-  - name: spice-haven-db
+  - name: spicehaven
     plan: free
