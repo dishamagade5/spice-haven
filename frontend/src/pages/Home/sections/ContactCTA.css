@@ -1,0 +1,33 @@
+.cta-section { position: relative; padding: 30px 8% 40px; background: #e8ddd3; font-family: "Manrope", sans-serif; }
+.cta-label { display: block; margin-bottom: 26px; text-align: center; font-size: 1.3rem; font-weight: 700; color: #1f3a38; }
+.cta-section h2 {font-family: "Manrope", sans-serif; margin: 0 0 18px; font-size: clamp(1.8rem, 3.6vw, 2.8rem); font-weight: 800; line-height: 1.35; color: #1f3a38; }
+.cta-actions { display: flex; gap: 12px; }
+.cta-btn {
+  padding: 5px 20px;
+  border: 1px solid #d9782f;
+  border-radius: 999px;
+  color: #d9782f;
+  font-size: 0.75rem;
+  text-decoration: none;
+  transition: background 0.25s, color 0.25s;
+}
+.cta-btn:hover { background: #d9782f; color: #fff; }
+.cta-whatsapp {
+  position: absolute;
+  right: 8%;
+  bottom: 50px;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #25d366;
+  font-size: 1.6rem;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+.cta-whatsapp svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}

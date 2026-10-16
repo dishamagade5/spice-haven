@@ -1,0 +1,94 @@
+.nv-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 6%;
+  background: #a9b6b3;
+  font-family: "Manrope", sans-serif;
+  transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+}
+
+/* Home page: hero ke upar transparent */
+.nv-header.nv-home {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding-top: 22px;
+  background: transparent;
+}
+
+.nv-header.nv-home.nv-scrolled {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background: #a9b6b3;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+.nv-logo { display: flex; align-items: center; text-decoration: none; }
+.nv-logo-img { height: 58px; width: auto; display: block; transition: height 0.3s ease; }
+.nv-scrolled .nv-logo-img { height: 46px; }
+
+.nv-links { display: flex; gap: 30px; margin-left: auto; }
+.nv-links a {
+  color: #1f3a38;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.nv-links a:hover { color: #d9782f; }
+
+.nv-cart {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #f6dcc4;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.nv-btn {
+  padding: 9px 20px;
+  border-radius: 999px;
+  background: #d9782f;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nv-burger {
+  display: none;
+  border: none;
+  background: transparent;
+  color: #1f3a38;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .nv-burger { display: block; }
+  .nv-cart { margin-left: auto; }
+  .nv-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: #a9b6b3;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .nv-links.nv-open { max-height: 260px; }
+  .nv-links a {
+    padding: 14px 6%;
+    border-top: 1px solid rgba(31, 58, 56, 0.15);
+  }
+}

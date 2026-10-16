@@ -1,0 +1,2 @@
+import '../simple-page.css'; import Navbar from '../../components/Navbar/Navbar.jsx'; import Footer from '../../components/Footer/Footer.jsx';
+export default function About(){return <><Navbar/><main className="simple-page"><div className="simple-inner"><div className="eyebrow">Our Story</div><h1>The Spice Haven</h1><p>Explore the dishes currently offered by the restaurant and submit a reservation request to plan your visit.</p></div></main><Footer/></>}

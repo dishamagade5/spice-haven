@@ -1,0 +1,25 @@
+.sh-modal-overlay{position:fixed;inset:0;background:rgba(18,37,28,.55);display:flex;align-items:center;justify-content:center;padding:18px;z-index:9999;overflow-y:auto;pointer-events:auto}
+.sh-modal-card{position:relative;background:#fffdf8;border:1px solid #eee5d6;border-radius:18px;max-width:480px;width:100%;padding:38px 34px;box-shadow:0 24px 60px rgba(18,37,28,.25);margin:auto}
+.sh-modal-card h2{font:700 clamp(26px,4vw,34px) 'Playfair Display',serif;margin:8px 0 6px;color:#17261e}
+.sh-modal-sub{color:#756f66;font-size:13.5px;line-height:1.6;margin:0 0 18px}
+.sh-modal-close{position:absolute;top:14px;right:14px;border:1px solid #eee5d6;background:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;color:#17261e}
+.sh-modal-close:hover{background:#f4ecdd}
+.sh-tabs{display:grid;grid-template-columns:1fr 1fr;background:#f4ecdd;border-radius:10px;padding:5px;margin-bottom:18px}
+.sh-tabs button{border:0;background:transparent;padding:11px;border-radius:8px;font-weight:600;font-size:14px;cursor:pointer;color:#756f66}
+.sh-tabs button.active{background:#12251c;color:#fff}
+.sh-form{display:grid;gap:12px}
+.sh-form label{display:grid;gap:6px;font-size:13px;font-weight:600;color:#4f554f}
+.sh-form input,.sh-pay-input,.sh-form select{width:100%;padding:12px 13px;border:1px solid #ded6c8;border-radius:8px;background:#fff;font-size:14px;color:#17261e}
+.sh-form input:focus,.sh-pay-input:focus{outline:2px solid #c89a3d;border-color:#c89a3d}
+.sh-primary-btn{border:0;cursor:pointer;background:#12251c;color:#fff;padding:14px;border-radius:9px;font-weight:600;font-size:14.5px;margin-top:4px}
+.sh-primary-btn:hover:not(:disabled){background:#1d3a2d}
+.sh-primary-btn:disabled{opacity:.6;cursor:not-allowed}
+.sh-secondary-btn{border:1px solid #ded6c8;cursor:pointer;background:#fff;color:#17261e;padding:13px;border-radius:9px;font-weight:600;font-size:14px}
+.sh-secondary-btn:hover{border-color:#c89a3d;color:#9a6a1d}
+.sh-error{background:#fbecec;color:#8c2f2f;border:1px solid #f0c9c9;padding:11px 13px;border-radius:8px;font-size:13px;margin-bottom:14px}
+.sh-info{background:#fdf6e7;color:#7a5410;border:1px solid #ecdcb4;padding:11px 13px;border-radius:8px;font-size:13px;margin-bottom:14px}
+.sh-demo-note{font-size:11.5px;color:#a39b8d;margin:16px 0 0;text-align:center}
+.sh-pay-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+.sh-pay-methods button{border:1px solid #ded6c8;background:#fff;border-radius:9px;padding:12px 6px;font-size:13px;font-weight:600;cursor:pointer;color:#4f554f}
+.sh-pay-methods button.active{border-color:#c89a3d;background:#fdf6e7;color:#7a5410}
+@media(max-width:480px){.sh-modal-card{padding:30px 22px}.sh-pay-methods{grid-template-columns:1fr 1fr}}

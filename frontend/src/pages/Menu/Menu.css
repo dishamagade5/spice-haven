@@ -1,0 +1,9 @@
+﻿.menu-sub{margin:6px 0 20px}
+.menu-controls{display:grid;gap:14px;margin:22px 0 8px}
+.menu-search{width:100%;max-width:520px;padding:13px 15px;border:1px solid #ded6c8;border-radius:9px;background:#fff;font-size:14px}
+.menu-search:focus{outline:2px solid #c89a3d;border-color:#c89a3d}
+.menu-filters{display:flex;flex-wrap:wrap;gap:10px}
+.menu-filters button{border:1px solid #e3d7c4;background:#fff;color:#4f554f;border-radius:30px;padding:9px 17px;font-size:13px;font-weight:600;cursor:pointer}
+.menu-filters button:hover{border-color:#c89a3d;color:#9a6a1d}
+.menu-filters button.active{background:#12251c;border-color:#12251c;color:#fff}
+.menu-empty{margin-top:26px;color:#8c2f2f}

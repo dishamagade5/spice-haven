@@ -1,0 +1,324 @@
+
+.sh-hero,
+.sh-hero * {
+  box-sizing: border-box;
+}
+
+.sh-hero {
+  position: relative;
+  overflow: hidden;
+  background: #e8ded0;
+  color: #173c3a;
+  font-family: "DM Sans", sans-serif;
+}
+
+.sh-hero-inner {
+  width: min(1440px, 100%);
+  min-height: 555px;
+  margin: 0 auto;
+  padding: 65px 8% 95px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 55px;
+}
+
+.sh-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.sh-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  color: #173c3a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.sh-eyebrow-line {
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background: #e66400;
+}
+
+.sh-hero-content h1 {
+  margin: 0 0 22px;
+  color: #173c3a;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(42px, 4.2vw, 68px);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -1.8px;
+}
+
+.sh-hero-description {
+  max-width: 510px;
+  margin: 0;
+  color: #465653;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.sh-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 27px;
+}
+
+.sh-primary-btn,
+.sh-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 44px;
+  padding: 12px 23px;
+  border: 1px solid #e66400;
+  border-radius: 28px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.sh-primary-btn {
+  background: #e66400;
+  color: #fff;
+}
+
+.sh-primary-btn:hover {
+  background: #bd5000;
+  border-color: #bd5000;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.sh-secondary-btn {
+  background: transparent;
+  color: #e66400;
+}
+
+.sh-secondary-btn:hover {
+  background: #e66400;
+  color: #fff;
+}
+
+.sh-hero-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 30px;
+  color: #596963;
+  font-size: 12px;
+}
+
+.sh-hero-note span {
+  color: #e66400;
+  font-size: 18px;
+}
+
+.sh-hero-visual {
+  position: relative;
+  min-height: 390px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sh-hero-image-frame {
+  position: relative;
+  z-index: 1;
+  width: min(390px, 100%);
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 7px solid #fffaf4;
+  border-radius: 50%;
+  box-shadow: 0 24px 55px rgb(23 60 58 / 14%);
+}
+
+.sh-hero-image-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sh-orange-orb {
+  position: absolute;
+  top: 1%;
+  right: 0;
+  width: 95px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #e66400;
+}
+
+.sh-image-badge {
+  position: absolute;
+  z-index: 2;
+  right: -1%;
+  bottom: 7%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: #fffaf4;
+  box-shadow: 0 10px 30px rgb(23 60 58 / 12%);
+}
+
+.sh-image-badge > span {
+  color: #e66400;
+  font-size: 25px;
+}
+
+.sh-image-badge div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sh-image-badge strong {
+  color: #173c3a;
+  font-size: 12px;
+}
+
+.sh-image-badge small {
+  color: #77756d;
+  font-size: 10px;
+}
+
+.sh-hero-wave {
+  position: absolute;
+  z-index: 3;
+  right: -2%;
+  bottom: -30px;
+  left: -2%;
+  height: 65px;
+  border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+  background: #fffaf4;
+}
+
+@media (max-width: 900px) {
+  .sh-hero-inner {
+    grid-template-columns: 1fr 0.85fr;
+    gap: 25px;
+    padding-right: 6%;
+    padding-left: 6%;
+  }
+
+  .sh-hero-visual {
+    min-height: 320px;
+  }
+
+  .sh-hero-content h1 {
+    font-size: clamp(36px, 5vw, 48px);
+  }
+
+  .sh-image-badge {
+    right: -3%;
+  }
+}
+
+@media (max-width: 650px) {
+  .sh-hero-inner {
+    grid-template-columns: 1fr;
+    padding: 55px 7% 90px;
+    gap: 30px;
+  }
+
+  .sh-hero-content h1 {
+    font-size: clamp(39px, 10vw, 54px);
+    letter-spacing: -1px;
+  }
+
+  .sh-hero-description {
+    font-size: 14px;
+  }
+
+  .sh-hero-visual {
+    min-height: auto;
+    padding: 12px 0 25px;
+  }
+
+  .sh-hero-image-frame {
+    width: min(310px, 85%);
+  }
+
+  .sh-orange-orb {
+    top: 0;
+    right: 2%;
+    width: 70px;
+  }
+
+  .sh-image-badge {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+/* ===== THE SPICE HAVEN - PAGE-WIDE FIXES ===== */
+
+:root {
+  --sh-cream: #e9ded0;
+  --sh-green: #203d3a;
+  --sh-orange: #e66d24;
+  --sh-white: #fffaf5;
+}
+
+body {
+  background: var(--sh-cream);
+  color: var(--sh-green);
+}
+
+/* Consistent section spacing */
+main > section {
+  position: relative;
+  width: 100%;
+}
+
+/* Common headings */
+main h2 {
+  color: var(--sh-green);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Common buttons and links */
+main a,
+main button {
+  transition: all 0.25s ease;
+}
+
+main a:hover,
+main button:hover {
+  transform: translateY(-2px);
+}
+
+/* Images must not overflow their containers */
+main img {
+  max-width: 100%;
+}
+
+/* Responsive safety */
+@media (max-width: 768px) {
+  main > section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  main h1 {
+    font-size: clamp(2rem, 8vw, 3.2rem);
+  }
+
+  main h2 {
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+  }
+}

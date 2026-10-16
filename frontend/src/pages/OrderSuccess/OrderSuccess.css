@@ -1,0 +1,13 @@
+.success-inner{max-width:760px;text-align:center;display:grid;justify-items:center}
+.success-tick{width:74px;height:74px;border-radius:50%;background:#28734a;color:#fff;display:grid;place-items:center;font-size:34px;margin-bottom:8px}
+.success-inner h1{text-align:center}
+.success-msg{max-width:560px;text-align:center}
+.success-card{width:100%;text-align:left;background:#fff;border:1px solid #eee5d6;border-radius:14px;padding:26px;display:grid;gap:10px;margin-top:20px}
+.s-row{display:flex;justify-content:space-between;gap:14px;font-size:14px;color:#4f554f}
+.s-row strong{color:#17261e}
+.s-row .paid{color:#28734a}
+.s-row .unpaid{color:#8c2f2f}
+.s-items{border-top:1px solid #eee5d6;padding-top:12px;display:grid;gap:8px}
+.s-items h3{margin:0;font-family:'Playfair Display',serif;font-size:18px}
+.s-row.total{border-top:1px solid #eee5d6;padding-top:12px;font-size:16px}
+.success-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:22px}
