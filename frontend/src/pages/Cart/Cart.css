@@ -1,0 +1,24 @@
+﻿.cart-page .cart-inner{max-width:1180px}
+.cart-empty{margin-top:20px;display:grid;gap:14px;justify-items:start}
+.cart-layout{display:grid;grid-template-columns:1.6fr 1fr;gap:26px;margin-top:26px;align-items:start}
+.cart-items{display:grid;gap:14px}
+.cart-row{display:grid;grid-template-columns:110px 1fr auto;gap:16px;background:#fff;border:1px solid #eee5d6;border-radius:14px;padding:14px;align-items:center}
+.cart-thumb{width:110px;height:90px;object-fit:cover;border-radius:10px}
+.cart-info h3{margin:0 0 4px;font-family:'Playfair Display',serif;font-size:19px}
+.cart-unit{margin:0 0 10px;color:#756f66;font-size:13px}
+.qty-row{display:inline-flex;align-items:center;gap:12px;border:1px solid #e3d7c4;border-radius:30px;padding:5px 10px}
+.qty-row button{width:28px;height:28px;border-radius:50%;border:1px solid #ded6c8;background:#fff;cursor:pointer;font-size:16px;line-height:1}
+.qty-row button:hover{border-color:#c89a3d;color:#9a6a1d}
+.qty-row span{min-width:22px;text-align:center;font-weight:600}
+.cart-right{display:grid;gap:8px;justify-items:end}
+.cart-right strong{color:#9a6a1d;font-size:17px}
+.cart-remove{border:0;background:transparent;color:#8c2f2f;cursor:pointer;font-size:13px;font-weight:600}
+.cart-remove:hover{text-decoration:underline}
+.cart-summary{background:#fff;border:1px solid #eee5d6;border-radius:14px;padding:24px;display:grid;gap:12px;position:sticky;top:96px}
+.cart-summary h3{margin:0;font-family:'Playfair Display',serif}
+.sum-row{display:flex;justify-content:space-between;font-size:14px;color:#4f554f}
+.sum-row.total{font-size:17px;font-weight:700;color:#17261e;border-top:1px solid #eee5d6;padding-top:12px}
+.sh-primary-btn.full,.sh-secondary-btn.full{width:100%;text-align:center;display:block;text-decoration:none}
+.sh-secondary-btn.center{text-align:center}
+@media(max-width:900px){.cart-layout{grid-template-columns:1fr}.cart-summary{position:static}}
+@media(max-width:560px){.cart-row{grid-template-columns:84px 1fr}.cart-right{grid-column:1/-1;justify-items:start;grid-template-columns:1fr auto;align-items:center;display:grid;width:100%}}

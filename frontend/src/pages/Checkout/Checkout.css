@@ -1,0 +1,16 @@
+.checkout-page .checkout-inner{max-width:1180px}
+.checkout-layout{display:grid;grid-template-columns:1.5fr 1fr;gap:24px;margin-top:24px;align-items:start}
+.checkout-left{display:grid;gap:20px}
+.checkout-card{background:#fff;border:1px solid #eee5d6;border-radius:14px;padding:26px;display:grid;gap:12px}
+.checkout-card h3{margin:0;font-family:'Playfair Display',serif;font-size:22px}
+.checkout-card p{margin:0;color:#4f554f;font-size:14px;line-height:1.7}
+.pay-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pay-cards button{text-align:left;border:1px solid #ded6c8;background:#fff;border-radius:12px;padding:18px;cursor:pointer;display:grid;gap:6px;color:#17261e}
+.pay-cards button strong{font-size:15px}
+.pay-cards button span{font-size:12.5px;color:#756f66;line-height:1.6}
+.pay-cards button.selected{border-color:#c89a3d;background:#fdf6e7;box-shadow:0 8px 22px rgba(200,154,61,.15)}
+.sum-line{display:flex;justify-content:space-between;font-size:13.5px;color:#4f554f}
+.checkout-card.summary{position:sticky;top:96px}
+.sh-error{background:#fbecec;color:#8c2f2f;border:1px solid #f0c9c9;padding:11px 13px;border-radius:8px;font-size:13px;margin-top:14px}
+.sh-info{background:#fdf6e7;color:#7a5410;border:1px solid #ecdcb4;padding:11px 13px;border-radius:8px;font-size:13px;margin-top:14px}
+@media(max-width:900px){.checkout-layout{grid-template-columns:1fr}.checkout-card.summary{position:static}.pay-cards{grid-template-columns:1fr}}

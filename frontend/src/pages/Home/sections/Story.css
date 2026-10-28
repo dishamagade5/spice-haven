@@ -1,0 +1,76 @@
+.st-section {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: center;
+  gap: 50px;
+  padding: 50px 8%;
+  background: #e8ddd3;
+  font-family: "Manrope", sans-serif;
+}
+.st-label { display: block; margin-bottom: 4px; font-size: 1rem; color: #2f4745; }
+.st-text h2 {font-family: "Manrope", sans-serif; margin: 0 0 14px; font-size: clamp(1.5rem, 2.6vw, 2.1rem); font-weight: 800; line-height: 1.1; color: #1f3a38; }
+.st-text p { margin: 0 0 18px; font-size: 0.85rem; line-height: 1.7; color: #2f4745; }
+.st-btn {
+  display: inline-block;
+  padding: 6px 18px;
+  border: 1px solid #d9782f;
+  border-radius: 999px;
+  color: #d9782f;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+.st-image img { width: 100%; max-height: 330px; object-fit: cover; border-radius: 16px; display: block; }
+@media (max-width: 800px) { .st-section { grid-template-columns: 1fr; } }
+
+.st-image {
+  overflow: hidden;
+  border-radius: 16px;
+}
+.st-image img {
+  transition: transform 0.5s ease;
+}
+.st-image:hover img {
+  transform: scale(1.06);
+}
+
+
+@media (max-width: 800px) {
+  .st-section {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 38px 22px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .st-text {
+    min-width: 0;
+  }
+
+  .st-label {
+    font-size: 16px;
+  }
+
+  .st-text h2 {
+    font-size: clamp(27px, 7vw, 36px);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+
+  .st-text p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .st-btn {
+    display: inline-block;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .st-image img {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+  }
+}

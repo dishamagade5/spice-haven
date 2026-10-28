@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #203d3a;
+  background: #e9ded0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  --cream: #e9ded0;
+  --green: #203d3a;
+  --orange: #e66d24;
+  --white: #fffaf5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--cream);
+  color: var(--green);
+  font-family: 'DM Sans', sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--green);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+main {
+  width: 100%;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 768px) {
+  section {
+    scroll-margin-top: 70px;
+  }
+}
+/* ===== HOVER EFFECTS ===== */
+.gl-item,
+.st-image,
+.chef-photo {
+  overflow: hidden !important;
+}
+
+.chef-photo {
+  width: fit-content;
+  border-radius: 16px;
+}
+
+.st-image {
+  border-radius: 16px;
+}
+
+.gl-item img,
+.st-image img,
+.chef-photo img {
+  transition: transform 0.5s ease !important;
+}
+
+.gl-item:hover img,
+.st-image:hover img,
+.chef-photo:hover img {
+  transform: scale(1.08) !important;
+}
+
+.ld-main,
+.ld-top,
+.ld-small,
+.sh-hero-image,
+.fd-card {
+  transition: transform 0.4s ease !important;
+}
+
+.ld-main:hover,
+.ld-top:hover,
+.ld-small:hover {
+  transform: scale(1.04) !important;
+}
+
+.sh-hero-image:hover {
+  transform: scale(1.03) !important;
+}
+
+.fd-card:hover {
+  transform: translateY(-6px) !important;
+}
+/* ===== Full width fix ===== */
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: initial;
+}

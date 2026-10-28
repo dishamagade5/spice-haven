@@ -1,0 +1,432 @@
+.fd-section {
+  --u: min(1vw, 14.4px);
+  position: relative;
+  padding: calc(var(--u) * 6.4) 0 calc(var(--u) * 5);
+  background: #e8ddd3;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+}
+
+.fd-title {
+  margin: 0 0 calc(var(--u) * 3.8);
+  font-family: "Cormorant Garamond", serif;
+  font-size: calc(var(--u) * 4.2);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1f3a38;
+}
+
+.fd-carousel {
+  position: relative;
+  width: min(100%, calc(var(--u) * 100));
+  margin: 0 auto;
+}
+
+.fd-track {
+  display: flex;
+  gap: calc(var(--u) * 1.7);
+  width: calc(var(--u) * 82.7);
+  margin: 0 auto;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: calc(var(--u) * 1) 0 calc(var(--u) * 1.5);
+}
+.fd-track::-webkit-scrollbar { display: none; }
+
+.fd-card {
+  flex: 0 0 calc(var(--u) * 19.4);
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.fd-card:hover { transform: translateY(-6px); }
+
+.fd-img-wrap {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+  width: calc(var(--u) * 12.6);
+  height: calc(var(--u) * 12.6);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+}
+.fd-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.fd-card:hover .fd-img-wrap img { transform: scale(1.1); }
+
+/* panel: circle ke neeche, thoda overlap */
+.fd-info {
+  width: 100%;
+  margin-top: calc(var(--u) * -2.9);
+  padding: calc(var(--u) * 3.8) calc(var(--u) * 1) calc(var(--u) * 1.55);
+  border-radius: calc(var(--u) * 2.6);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.fd-info h3 {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: calc(var(--u) * 1.9);
+  font-weight: 600;
+  line-height: 1.26;
+  color: #1f3a38;
+}
+
+.fd-price {
+  margin: calc(var(--u) * 0.8) 0 0;
+  font-family: "Manrope", sans-serif;
+  font-size: calc(var(--u) * 1.85);
+  font-weight: 500;
+  line-height: 1.3;
+  color: #1f3a38;
+}
+
+.fd-order-btn {
+  margin-top: calc(var(--u) * 0.85);
+  height: calc(var(--u) * 3.1);
+  padding: 0 calc(var(--u) * 2.2);
+  border: 1px solid #d9782f;
+  border-radius: 999px;
+  background: transparent;
+  color: #d9782f;
+  font-family: "Manrope", sans-serif;
+  font-size: calc(var(--u) * 1.2);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+.fd-order-btn:hover { background: #d9782f; color: #fff; }
+
+/* arrows: grey circles */
+.fd-arrow {
+  position: absolute;
+  top: calc(var(--u) * 11.4);
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: calc(var(--u) * 4.5);
+  height: calc(var(--u) * 4.5);
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #c3cac8;
+  color: #1f3a38;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+.fd-arrow svg { width: 55%; height: 55%; }
+.fd-arrow:hover { background: #aab4b2; }
+.fd-prev { left: calc(var(--u) * 2.7); }
+.fd-next { right: calc(var(--u) * 2.7); }
+
+.fd-view-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(var(--u) * 3.8);
+  margin-top: calc(var(--u) * 0.3);
+  padding: 0 calc(var(--u) * 3.3);
+  border-radius: 999px;
+  background: #d9782f;
+  color: #fff;
+  font-size: calc(var(--u) * 1.5);
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+.fd-view-btn:hover { transform: translateY(-2px); }
+
+@media (max-width: 800px) {
+  .fd-section { --u: 9px; }
+  .fd-track { width: 100%; padding-left: 16px; padding-right: 16px; }
+  .fd-prev { left: 4px; }
+  .fd-next { right: 4px; }
+}
+
+
+/* Mobile responsive fix */
+@media (max-width: 800px) {
+  .fd-section {
+    --u: 9px;
+    padding: 45px 0 40px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .fd-title {
+    font-size: clamp(28px, 7vw, 38px);
+    line-height: 1.15;
+    padding: 0 16px;
+    margin-bottom: 25px;
+    overflow-wrap: anywhere;
+  }
+
+  .fd-carousel {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .fd-track {
+    box-sizing: border-box;
+    width: 100%;
+    gap: 16px;
+    padding: 12px 18px 20px;
+  }
+
+  .fd-card {
+    flex: 0 0 72%;
+    min-width: 0;
+  }
+
+  .fd-img-wrap {
+    width: 145px;
+    height: 145px;
+    max-width: 85%;
+  }
+
+  .fd-info {
+    box-sizing: border-box;
+    padding: 35px 10px 16px;
+    margin-top: -25px;
+    border-radius: 22px;
+  }
+
+  .fd-info h3 {
+    font-size: 19px;
+  }
+
+  .fd-price {
+    font-size: 18px;
+  }
+
+  .fd-order-btn {
+    height: 34px;
+    font-size: 13px;
+    padding: 0 18px;
+  }
+
+  .fd-arrow {
+    top: 100px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .fd-prev {
+    left: 3px;
+  }
+
+  .fd-next {
+    right: 3px;
+  }
+
+  .fd-view-btn {
+    height: 42px;
+    margin-top: 10px;
+    padding: 0 28px;
+    font-size: 15px;
+  }
+}
+
+
+/* FINAL MOBILE FIX — FEATURED DISHES */
+@media screen and (max-width: 800px) {
+  .fd-section {
+    --u: 9px;
+    width: 100%;
+    max-width: 100%;
+    padding: 38px 0 36px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .fd-title {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 14px;
+    margin: 0 0 24px;
+    font-size: clamp(27px, 7vw, 36px);
+    line-height: 1.2;
+    overflow-wrap: break-word;
+  }
+
+  .fd-carousel {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .fd-track {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    gap: 12px;
+    margin: 0;
+    padding: 12px 16px 18px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .fd-card {
+    flex: 0 0 calc((100% - 12px) / 2);
+    width: calc((100% - 12px) / 2);
+    min-width: 0;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+  }
+
+  .fd-img-wrap {
+    width: min(120px, 80%);
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .fd-info {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    margin-top: -20px;
+    padding: 30px 6px 14px;
+    overflow-wrap: anywhere;
+  }
+
+  .fd-info h3 {
+    font-size: clamp(14px, 4vw, 18px);
+    line-height: 1.25;
+  }
+
+  .fd-price {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  .fd-order-btn {
+    max-width: 100%;
+    height: 34px;
+    padding: 0 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .fd-arrow {
+    top: 95px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .fd-prev {
+    left: 3px;
+  }
+
+  .fd-next {
+    right: 3px;
+  }
+
+  .fd-view-btn {
+    height: 42px;
+    margin-top: 8px;
+    padding: 0 26px;
+    font-size: 15px;
+  }
+}
+
+/* ===== FEATURED DISHES MOBILE FIX ===== */
+
+.fd-section,
+.fd-carousel {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.fd-section {
+  overflow: hidden;
+}
+
+.fd-title {
+  max-width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+.fd-track {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.fd-card {
+  min-width: 0;
+}
+
+.fd-img-wrap {
+  max-width: 100%;
+}
+
+@media (max-width: 800px) {
+  .fd-track {
+    padding: 12px 16px 20px;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .fd-card {
+    flex: 0 0 min(78vw, 300px);
+    scroll-snap-align: center;
+  }
+
+  .fd-img-wrap {
+    width: min(46vw, 170px);
+    height: min(46vw, 170px);
+  }
+
+  .fd-info h3 {
+    font-size: 20px;
+    overflow-wrap: break-word;
+  }
+
+  .fd-price {
+    font-size: 18px;
+  }
+
+  .fd-order-btn {
+    min-height: 38px;
+    font-size: 14px;
+  }
+
+  .fd-prev {
+    left: 4px;
+  }
+
+  .fd-next {
+    right: 4px;
+  }
+}
+
+/* ===== DESKTOP: cards ko center me wapas lao ===== */
+@media (min-width: 801px) {
+  .fd-carousel {
+    width: min(100%, calc(var(--u) * 100));
+    margin: 0 auto;
+  }
+
+  .fd-track {
+    width: calc(var(--u) * 82.7);
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}

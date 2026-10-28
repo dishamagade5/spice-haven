@@ -1,0 +1,79 @@
+.chef-section {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 8%;
+  background: #e8ddd3;
+  font-family: "Manrope", sans-serif;
+}
+.chef-photo img { width: 100%; max-width: 340px; border-radius: 16px; display: block; box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25); }
+.chef-role { font-size: 0.95rem; color: #2f4745; }
+.chef-text h2 {font-family: "Manrope", sans-serif; margin: 2px 0 12px; font-size: 1.9rem; font-weight: 800; color: #1f3a38; }
+.chef-text p { margin: 0 0 18px; font-size: 1.05rem; line-height: 1.6; color: #2f4745; }
+.chef-badges { display: flex; gap: 14px; flex-wrap: wrap; }
+.chef-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; color: #1f3a38; }
+.chef-badge span { color: #d9782f; }
+@media (max-width: 800px) { .chef-section { grid-template-columns: 1fr; } }
+
+.chef-photo {
+  width: fit-content;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.chef-photo img {
+  transition: transform 0.5s ease;
+}
+.chef-photo:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 800px) {
+  .chef-section {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 36px 22px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .chef-photo {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .chef-photo img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+  }
+
+  .chef-text {
+    min-width: 0;
+  }
+
+  .chef-role {
+    font-size: 16px;
+  }
+
+  .chef-text h2 {
+    font-size: clamp(27px, 7vw, 36px);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+
+  .chef-text p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .chef-badges {
+    gap: 12px;
+  }
+
+  .chef-badge {
+    font-size: 13px;
+  }
+}

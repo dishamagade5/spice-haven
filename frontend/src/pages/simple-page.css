@@ -1,0 +1,687 @@
+.simple-page{min-height:65vh;padding:80px 7%}.simple-inner{max-width:1100px;margin:auto}.simple-inner h1,.form-card h1{font:700 clamp(38px,6vw,62px) 'Playfair Display',serif}.simple-inner p{max-width:720px;line-height:1.8;color:#756f66}.form-card{max-width:700px;margin:auto;background:#fff;border:1px solid #eee5d6;border-radius:16px;padding:35px;box-shadow:0 10px 30px rgba(18,37,28,.06)}.form-card form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.form-card input,.form-card textarea{width:100%;padding:13px;border:1px solid #ded6c8;border-radius:8px;background:#fffdf8}.form-card textarea{grid-column:1/-1;min-height:110px}.form-card button{border:0;cursor:pointer}.success{color:#28734a}.menu-page .simple-inner{max-width:1180px}@media(max-width:650px){.form-card form{grid-template-columns:1fr}.form-card textarea{grid-column:auto}}
+/* =========================================
+   MENU PAGE
+========================================= */
+
+.menu-page {
+  background: #fff;
+  color: #222;
+}
+/* Automatically pushes down the top of all pages so they clear the fixed navbar */
+main.simple-page, 
+.simple-page,
+.contact-page,
+.about-page{
+  padding-top: 260px !important;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.menu-hero {
+  height: 150px;
+  background: #dedadb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-hero h1 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 36px;
+  font-weight: 700;
+
+  color: #222;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.menu-container {
+  max-width: 1100px;
+
+  margin: auto;
+
+  padding: 70px 40px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.menu-heading {
+  text-align: center;
+
+  margin-bottom: 25px;
+}
+
+.menu-heading span {
+  font-size: 12px;
+
+  color: #555;
+}
+
+.menu-heading h2 {
+  margin: 6px 0 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 30px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   FILTER BUTTONS
+========================================= */
+
+.menu-filters {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 9px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 55px;
+}
+
+.menu-filters button {
+  border: 1px solid #999;
+
+  background: #fff;
+
+  color: #333;
+
+  border-radius: 20px;
+
+  padding: 6px 17px;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.menu-filters button:hover {
+  background: #eee;
+}
+
+.menu-filters button.active {
+  background: #dedadb;
+
+  border-color: #aaa;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.menu-sections {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 65px;
+}
+
+.menu-section {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 50px;
+
+  align-items: center;
+}
+
+
+/* Alternate layout */
+
+.menu-section.reverse
+.menu-items {
+  order: 2;
+}
+
+.menu-section.reverse
+.menu-image {
+  order: 1;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 20px;
+}
+
+.section-title span {
+  width: 55px;
+
+  height: 22px;
+
+  background: #dedadb;
+
+  clip-path: polygon(
+    0 50%,
+    25% 0,
+    100% 0,
+    75% 50%,
+    100% 100%,
+    25% 100%
+  );
+}
+
+.section-title h3 {
+  margin: 0 12px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   MENU ITEM
+========================================= */
+
+.menu-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 10px 0;
+
+  border-bottom: 1px dashed #ddd;
+}
+
+
+/* =========================================
+   ROUND FOOD IMAGE
+========================================= */
+
+.food-icon {
+  width: 42px;
+
+  height: 42px;
+
+  min-width: 42px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  background: #dedadb;
+}
+
+.food-icon img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* =========================================
+   FOOD INFO
+========================================= */
+
+.food-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.food-info h4 {
+  margin: 0;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.food-info p {
+  margin: 3px 0 0;
+
+  color: #777;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.food-price {
+  font-size: 13px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  color: #333;
+}
+
+
+/* =========================================
+   SEE MORE
+========================================= */
+
+.see-more {
+  margin-top: 15px;
+
+  padding: 5px 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #222;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.see-more:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   LARGE FOOD IMAGE
+========================================= */
+
+.menu-image {
+  width: 100%;
+
+  height: 280px;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #dedadb;
+}
+
+.menu-image img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.menu-image:hover img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   NO RESULT
+========================================= */
+
+.no-menu {
+  text-align: center;
+
+  padding: 50px;
+
+  color: #777;
+
+  font-size: 16px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .menu-container {
+    padding: 50px 20px;
+  }
+
+  .menu-section {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .menu-section.reverse .menu-items,
+  .menu-section.reverse .menu-image {
+    order: initial;
+  }
+
+  .menu-image {
+    height: 240px;
+  }
+
+  .menu-heading h2 {
+    font-size: 25px;
+  }
+
+  .menu-hero {
+    height: 120px;
+  }
+
+  .menu-hero h1 {
+    font-size: 28px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .menu-filters {
+    gap: 6px;
+  }
+
+  .menu-filters button {
+    padding: 5px 12px;
+  }
+
+  .section-title h3 {
+    font-size: 19px;
+  }
+
+  .section-title span {
+    width: 35px;
+  }
+
+  .food-info h4 {
+    font-size: 13px;
+  }
+
+  .food-info p {
+    font-size: 8px;
+  }
+
+  .food-price {
+    font-size: 12px;
+  }
+}
+/* =========================================
+   SPICE HAVEN - MENU
+========================================= */
+
+.menu-page {
+  background: #fff;
+  color: #222;
+}
+
+.menu-hero {
+  min-height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dedadb;
+}
+
+.menu-hero h1 {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.menu-container {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+.menu-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.menu-heading span {
+  font-size: 13px;
+  color: #666;
+}
+
+.menu-heading h2 {
+  margin: 6px 0 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.menu-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 60px;
+}
+
+.menu-filters button {
+  border: 1px solid #999;
+  background: #fff;
+  color: #222;
+  border-radius: 999px;
+  padding: 7px 18px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.2s ease;
+}
+
+.menu-filters button:hover,
+.menu-filters button.active {
+  background: #dedadb;
+  border-color: #dedadb;
+}
+
+.menu-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.menu-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.menu-section.reverse .menu-items {
+  order: 2;
+}
+
+.menu-section.reverse .menu-image {
+  order: 1;
+}
+
+.menu-items {
+  min-width: 0;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.section-title span {
+  width: 48px;
+  height: 18px;
+  background: #dedadb;
+  clip-path: polygon(
+    0 50%,
+    25% 0,
+    100% 0,
+    75% 50%,
+    100% 100%,
+    25% 100%
+  );
+}
+
+.section-title h3 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.food-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #eee;
+}
+
+.food-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.food-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.food-info h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.food-info p {
+  margin: 4px 0 0;
+  color: #777;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.food-price {
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.see-more {
+  display: block;
+  margin: 16px auto 0;
+  padding: 6px 14px;
+  border: 1px solid #999;
+  border-radius: 999px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.see-more:hover {
+  background: #dedadb;
+}
+
+.menu-image {
+  height: 300px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #eee;
+}
+
+.menu-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.no-menu {
+  padding: 50px 0;
+  text-align: center;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .menu-container {
+    width: min(100% - 30px, 600px);
+    padding: 50px 0;
+  }
+
+  .menu-section {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .menu-section.reverse .menu-items,
+  .menu-section.reverse .menu-image {
+    order: initial;
+  }
+
+  .menu-image {
+    height: 250px;
+  }
+
+  .menu-heading h2 {
+    font-size: 26px;
+  }
+
+  .menu-hero {
+    min-height: 130px;
+  }
+
+  .menu-hero h1 {
+    font-size: 30px;
+  }
+}

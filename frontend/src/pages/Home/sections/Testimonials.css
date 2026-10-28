@@ -1,0 +1,8 @@
+.ts-section { padding: 40px 8% 50px; background: #e8ddd3; text-align: center; font-family: "Manrope", sans-serif; }
+.ts-section h2 { margin: 0 0 26px; font-size: 1.5rem; font-weight: 700; color: #1f3a38; }
+.ts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.ts-card { padding: 20px 18px; border-radius: 14px; background: rgba(255, 255, 255, 0.5); text-align: left; }
+.ts-stars { margin-bottom: 8px; color: #d9782f; letter-spacing: 2px; }
+.ts-card p { margin: 0 0 12px; font-size: 0.85rem; line-height: 1.6; color: #2f4745; }
+.ts-card strong { font-size: 0.85rem; color: #1f3a38; }
+@media (max-width: 800px) { .ts-grid { grid-template-columns: 1fr; } }

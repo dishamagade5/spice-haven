@@ -1,0 +1,135 @@
+.ld-section {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 60px 8%;
+  background: #e8ded2;
+  font-family: "Manrope", sans-serif;
+}
+
+.ld-collage {
+  position: relative;
+  padding: 24px 0 24px 40px;
+}
+
+.ld-main {
+  display: block;
+  width: 78%;
+  margin-left: 12%;
+  border-radius: 14px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+}
+
+.ld-top {
+  position: absolute;
+  top: 0;
+  right: 6%;
+  width: 30%;
+  border: 3px solid #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+}
+
+.ld-small {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 24%;
+  border: 3px solid #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+}
+
+.ld-text h2 {
+  margin: 0 0 14px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1f3b39;
+}
+
+.ld-text p {
+  margin: 0 0 20px;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #2f4745;
+}
+
+.ld-btn {
+  display: inline-block;
+  padding: 9px 26px;
+  border-radius: 999px;
+  background: #d9732a;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (max-width: 800px) {
+  .ld-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ld-main,
+.ld-top,
+.ld-small {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.ld-main:hover,
+.ld-top:hover,
+.ld-small:hover {
+  transform: scale(1.04);
+  z-index: 5;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.32);
+}
+
+
+@media (max-width: 800px) {
+  .ld-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px 22px;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .ld-collage {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 0;
+  }
+
+  .ld-main {
+    width: 82%;
+    margin-left: 9%;
+  }
+
+  .ld-top {
+    width: 30%;
+    right: 0;
+  }
+
+  .ld-small {
+    width: 25%;
+    left: 0;
+  }
+
+  .ld-text h2 {
+    font-size: clamp(32px, 8vw, 42px);
+    line-height: 1.1;
+  }
+
+  .ld-text p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .ld-btn {
+    font-size: 15px;
+    padding: 12px 24px;
+  }
+}
