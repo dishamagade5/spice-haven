@@ -1,5 +1,5 @@
-# Stage 1: Build the application using Maven with Eclipse Temurin Java 17
-FROM maven:3.8.5-eclipse-temurin-17 AS build
+# Stage 1: Build the application with Java 21
+FROM maven:3.9.6-eclipse-temurin-21-alpine AS build
 WORKDIR /app
 
 # Copy pom.xml and source code
@@ -9,8 +9,8 @@ COPY src ./src
 # Build the jar file
 RUN mvn clean package -DskipTests
 
-# Stage 2: Run the application using lightweight Eclipse Temurin JRE/JDK 17
-FROM eclipse-temurin:17-jdk-slim
+# Stage 2: Run the application with Java 21 JRE
+FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 
 # Copy the built jar from the build stage
